@@ -96,22 +96,28 @@
 /* Responsive Styling */
 @media (max-width: 800px) {
     .login-container {
-        padding: 15px 20px; /* Less padding for smaller screens */
+        padding: 13px 17px; /* Less padding for smaller screens */
     }
 
     .login-container h1 {
-        font-size: 20px; /* Adjusted font size */
+        font-size: 13px; /* Adjusted font size */
     }
 
     .login-fields input {
-        height: 45px; /* Adjusted input height */
+        width: 100%; /* Full width inputs */
+        height: 35px; /* Slightly smaller height for mobile */
+        font-size: 14px; /* Adjust font size */
+        padding: 10px; /* Adjusted input height */
     }
 
     .login-container button {
-        height: 45px; /* Adjusted button height */
-        font-size: 16px;
+        width: 100%; /* Full width buttons */
+        height: 45px; /* Smaller button height */
+        font-size: 14px; 
     }
 }
+
+
 
 /* Footer Styling */
 footer {

@@ -154,17 +154,79 @@
     .cartitems-promobox button {
         width: 120px;
         margin-left: -125px;
-
     }
 }
-@media(max-width:500px) {
+
+@media(max-width: 500px) {
+    /* Adjusting layout for smaller screens */
     .cartitems-format-main {
-        display: none;
-        grid-template-columns: 0.5fr 3fr 0.5fr;
-        gap: 10px;
-    }
-    .cartitems-format {
         display: grid;
+        grid-template-columns: 0.8fr 2fr 1fr 1fr 1fr 0.5fr; /* Adjusted for better alignment */
+        gap: 5px;
+        font-size: 12px; /* Reduce font size for smaller screens */
+        align-items: center; /* Align content vertically */
+        text-align: center; /* Align content horizontally */
+    }
 
+    .carticon-product-icon {
+        height: 40px; /* Reduce product icon size for mobile */
+    }
+
+    .cartitems-format p {
+        display: block;
+        margin: 0; /* Keep things tight */
+    }
+
+    .cartitems-title {
+        text-align: left; /* Align text to the left for better readability */
+    }
+
+    .cartitems-price, 
+    .cartitems-quantity, 
+    .cartitems-total, 
+    .cartitems-remove-icon {
+        text-align: center; /* Align other elements to the center */
+    }
+
+    .cartitems-quantity {
+        width: 40px;
+        height: 30px;
+        text-align: center; /* Keep the input field small and centered */
+    }
+
+    .cartitems-remove-icon {
+        font-size: 20px; /* Adjust remove icon size */
+    }
+
+    .cartitems-total {
+        margin: 0; /* Remove margins for better alignment */
+    }
+
+    .cartitems-down {
+        margin: 20px 0;
+        flex-direction: column;
+        gap: 20px; /* Reduce gap between elements */
+    }
+
+    .cartitems-total button {
+        max-width: 150px; /* Ensure buttons are not too large on small screens */
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .cartitems-promobox {
+        width: 100%; /* Full width promo box */
+        max-width: 400px;
+        margin-top: 10px;
+    }
+
+    .cartitems-promobox input {
+        width: 100%; /* Ensure the input box takes up full width */
+    }
+
+    .cartitems-promobox button {
+        width: 100px;
+        margin-left: -5px; /* Adjust button position slightly */
     }
 }
+

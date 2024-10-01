@@ -24,7 +24,7 @@
     margin: 20px 0;
     font-size: 28px;
     text-align: center;
-    color:#6f63ad; /* Center the header text */
+    color:#6756b8; /* Center the header text */
 }
 
 .loginsignup-fields {
@@ -122,5 +122,56 @@
 
     .loginsignup-agree {
         font-size: 14px;
+    }
+}
+
+@media(max-width: 500px) {
+    /* Adjust container for smaller screens */
+    .loginsignup-container {
+        max-width: 100%; /* Ensure full width */
+        padding: 15px; /* Adjust padding for better spacing */
+        font-size: 14px; /* Slightly reduce font size for better readability */
+    }
+
+    /* Adjust input field sizes */
+    .loginsignup-fields input {
+        width: 100%; /* Full width inputs */
+        height: 35px; /* Slightly smaller height for mobile */
+        font-size: 14px; /* Adjust font size */
+        padding: 10px; /* Add padding inside inputs */
+    }
+
+    /* Adjust button size and style */
+    .loginsignup-container button {
+        width: 100%; /* Full width buttons */
+        height: 45px; /* Smaller button height */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* Adjust login/signup text size */
+    .loginsignup-login {
+        font-size: 12px; /* Smaller text size for mobile */
+        text-align: center; /* Center-align text */
+        padding-top: 10px;
+    }
+
+    /* Adjust agreement text */
+    .loginsignup-agree {
+        font-size: 12px; /* Smaller text size for agreement */
+        text-align: center; /* Center-align */
+    }
+
+    /* Adjust margins and spacing */
+    .loginsignup-fields {
+        margin-bottom: 15px; /* Reduce space between fields */
+    }
+
+    .loginsignup-container {
+        margin: 0 auto; /* Center the container on the page */
+    }
+
+    /* Additional spacing for mobile layout */
+    .loginsignup-agree {
+        margin-top: 10px; /* Add space above agreement text */
     }
 }

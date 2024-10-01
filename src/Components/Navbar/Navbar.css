@@ -329,7 +329,7 @@ body.dark-mode .nav-cart-count {
     .nav_dropdown {
         display: block; /* Show dropdown icon at 800px */
         cursor: pointer;
-        width: 28px; /* Adjust size as needed */
+        width: 25px; /* Adjust size as needed */
         height: auto; /* Maintain aspect ratio */
     }
     
@@ -386,7 +386,7 @@ body.dark-mode .nav-cart-count {
     .nav_dropdown {
         display: block; /* Show dropdown icon at 800px */
         cursor: pointer;
-        width: 24px; /* Adjust size as needed */
+        width: 22px; /* Adjust size as needed */
         height: auto; /* Maintain aspect ratio */
     }
 
