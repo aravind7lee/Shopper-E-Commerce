@@ -380,3 +380,75 @@ body.dark-mode .nav-cart-count {
         margin-left: -40px;
     }
 }
+
+/* Max-width 480px */
+@media (max-width: 480px) {
+    .nav-menu {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .nav-menu li a {
+        font-size: 15px;
+        padding: 6px 10px;
+    }
+
+    .nav-login-cart {
+        gap: 18px;
+    }
+
+    .nav-login-cart button {
+        font-size: 13px;
+        width: 90px;
+        height: 35px;
+    }
+
+    .nav-cart-count {
+        margin-left: -35px;
+    }
+
+    /* Aligning dark mode icon properly for 480px screen */
+    .dark-mode-icon {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Max-width 460px */
+@media (max-width: 460px) {
+    .nav-menu {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    .nav-menu li a {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    .nav-login-cart {
+        gap: 15px;
+    }
+
+    .nav-login-cart button {
+        font-size: 12px;
+        width: 85px;
+        height: 32px;
+    }
+
+    .nav-cart-count {
+        margin-left: -30px;
+    }
+
+    /* Aligning dark mode icon properly for 460px screen */
+    .dark-mode-icon {
+        position: absolute;
+        right: 8px;
+        top: 12px;
+        width: 22px;
+        height: 22px;
+    }
+}
