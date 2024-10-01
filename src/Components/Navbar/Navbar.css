@@ -1,91 +1,259 @@
 .navbar {
     display: flex;
-    justify-content: space-around;
-    padding: 16px;
-    box-shadow: 0px 1px 3px -2px black;
+    justify-content: space-between;
     align-items: center;
+    padding: 16px 40px;
+    background: linear-gradient(90deg, #ff758c 0%, #ff7eb3 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+    transition: background-color 0.4s, color 0.4s;
 }
 
-
-.nav-logo{
-    display: flex;
-    align-items: center;
-    gap:10px;
+.navbar.dark {
+    background: linear-gradient(90deg, #2c2c2c 0%, #1c1c1c 100%);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
-.nav-logo p{
-    color: #171717;
+/* Logo Styling */
+.nav-logo p {
+    color: #ffffff;
     font-size: 38px;
     font-weight: 600;
+    font-family: 'Bebas Neue', sans-serif;
+    transition: color 0.3s;
 }
 
+.navbar.dark .nav-logo p {
+    color: #f0f0f0;
+}
 
-.nav-menu{
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo-img {
+    width: 50px; /* Adjust as needed for logo size */
+    height: auto; /* Keep aspect ratio */
+}
+
+/* Advanced Nav Menu Styling */
+.nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 50px;
-    color: #626262;
-    font-size: 20px;
+    gap: 40px;
+    color: #ffffff;
+    font-size: 18px;
     font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
 
-.nav-menu li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
+.nav-menu li {
+    position: relative;
+    display: inline-block;
     cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
 }
 
-.nav-menu hr{
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background-color: #ff4141;
+.nav-menu li a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.3s;
 }
-.nav-login-cart{
+
+.nav-menu li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Stylish Dropdown Menu */
+.nav-menu li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu li:hover .dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 500;
+}
+
+.nav-menu li .dropdown li {
+    margin: 10px 0;
+}
+
+.nav-menu li .dropdown li a {
+    color: #333;
+    font-size: 16px;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu li .dropdown li a:hover {
+    background-color: #ff7eb3;
+    color: #fff;
+}
+
+/* Stylish Hover Effects */
+.nav-menu li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffeb3b;
+    transition: width 0.4s;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-menu li:hover::after {
+    width: 100%;
+}
+
+/* Button and Cart Styling */
+.nav-login-cart {
     display: flex;
     align-items: center;
-    gap:45px
+    gap: 45px;
 }
 
-.nav-login-cart button{
+.nav-login-cart button {
     width: 157px;
     height: 58px;
     outline: none;
-    border: 1px solid #7a7a7a;
-    border-radius: 75px;
-    color: #515151;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #ff4141 0%, #ff7272 100%);
+    color: white;
     font-size: 20px;
     font-weight: 500;
-    background: white;
     cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
 }
-.nav-login-cart button:active{
-    background: #f3f3f3;
-    
+
+.nav-login-cart button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
-.nav-cart-count{
-    width:22px;
-    height:22px;
-    display:flex;
+
+.nav-login-cart button:active {
+    background: linear-gradient(90deg, #ff3232 0%, #ff6363 100%);
+}
+
+/* Cart Icon */
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -35px;
     margin-left: -55px;
-    border-radius:11px;
-    font-size:14px;
+    border-radius: 50%;
+    font-size: 14px;
     background: red;
-    color:white;
+    color: white;
+    transition: transform 0.3s;
 }
 
+.nav-cart-count:hover {
+    transform: scale(1.1);
+}
+
+/* Dark Mode Cart and Button */
+.navbar.dark .nav-login-cart button {
+    background: linear-gradient(90deg, #303030 0%, #404040 100%);
+    color: #f0f0f0;
+}
+
+.navbar.dark .nav-cart-count {
+    background: #ff5757;
+}
+
+/* Apply dark mode to the entire site */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* Links in dark mode */
+body.dark-mode a {
+    color: #ffeb3b;
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode a:hover {
+    color: #ff7eb3;
+}
+
+/* Buttons in dark mode */
+body.dark-mode button {
+    background: linear-gradient(90deg, #303030 0%, #404040 100%);
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+body.dark-mode button:hover {
+    background: linear-gradient(90deg, #505050 0%, #606060 100%);
+}
+
+/* Card and product styles in dark mode */
+body.dark-mode .product-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .product-card h3,
+body.dark-mode .product-card p {
+    color: #f0f0f0;
+}
+
+/* Dark Mode Styling for footer */
+body.dark-mode .footer {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+}
+
+/* General dark mode elements */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
+    color: #ffffff;
+}
+
+body.dark-mode .nav-cart-count {
+    background: #ff5757;
+}
+
+/* Hide nav_dropdown icon initially */
 .nav_dropdown {
-    display: none;
+    display: none; /* Hide by default */
 }
 
+/* Media Queries for Responsive Design */
 @media(max-width:1280px){
     .navbar {
         padding: 12px 50px;
@@ -145,50 +313,70 @@
     }
 }
 
-/* Add your media query */
-@media (max-width: 800px) {
-    .navbar {
-        padding: 10px 0;
-    }
 
+
+/* Max-width 800px */
+@media(max-width: 800px) {
     .nav_dropdown {
-        display: block; /* Show the dropdown icon */
-        width: 30px;
-        transform: rotate(-90deg);
-        transition: 0.5s;
-    }
-    .nav-menu{
-        display: none;
-        height: 80px;
-        width: 100%;
-        position: absolute;
-        background-color: white;
-        justify-content: center;
-        top:50px;
-    }
-    .nav-menu-visible {
-        display: flex;
-
-    }
-    .nav_dropdown.open {
-        transform: rotate(0deg);
-    }
-}
-@media (max-width:500px){
-    .navbar {
-        padding: 8px 0px;
-        gap: 0;
-    }
-    .nav-logo{
-        transform: scale(0.8);
-    }
-    .nav-menu {
-        height: 70px;
-        top: 50px;
-    }
-    .nav-login-cart {
-        transform: scale(0.8);
+        display: block; /* Show dropdown icon at 800px */
+        cursor: pointer;
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
     }
     
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        color: white;
+    }
+    
+    .nav-menu-visible {
+        display: flex !important;
+    }
+    
+    .nav-menu li {
+        margin-bottom: 15px;
+    }
+    
+    .nav-menu li a {
+        color: #fff;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
 
+/* Max-width 500px */
+@media (max-width: 500px) {
+    .nav-menu {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .nav-menu li a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .nav-login-cart {
+        gap: 20px;
+    }
+
+    .nav-login-cart button {
+        font-size: 14px;
+        width: 100px;
+        height: 40px;
+    }
+
+    .nav-cart-count {
+        margin-left: -40px;
+    }
 }

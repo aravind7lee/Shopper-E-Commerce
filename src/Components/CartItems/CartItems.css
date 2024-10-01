@@ -13,10 +13,15 @@
     align-items: center;
     gap: 75px;
     padding: 20px 0px;
-    color: #454545;
+    color: #7b7a7b;
     font-size: 18px;
     font-weight: 600;
 }
+
+.cartitems-format-main p {
+    color: #6e748f
+}
+
 .cartitems-format {
     font-size: 17px;
     font-weight: 500;
@@ -47,17 +52,27 @@
     margin-right: 200px;
     gap: 40px;
 }
+
+.cartitems-total h1 {
+    font-family: 'Bebas Neue', sans-serif; 
+    color:#9922de
+}
+
 .cartitems-total-item {
     display: flex;
     justify-content: space-between;
     padding: 15px 0px;
 }
+.cartitems-total-item h3 {
+   color: #6f7bc5;
+}
+
 .cartitems-total button {
     width: 262px;
     height: 58px;
     outline: none;
     border: none;
-    background: #ff5a5a;
+    background: #ad9279;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
