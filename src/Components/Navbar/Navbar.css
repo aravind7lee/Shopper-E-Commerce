@@ -373,7 +373,7 @@ body.dark-mode .nav-cart-count {
     }
 
     .nav-login-cart {
-        gap: 20px;
+        gap: 22px;
     }
 
     .dark-mode-icon {
@@ -383,7 +383,7 @@ body.dark-mode .nav-cart-count {
 
 @media (max-width: 480px) {
     .nav-logo p {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .nav-menu {
@@ -391,11 +391,11 @@ body.dark-mode .nav-cart-count {
     }
 
     .nav-login-cart {
-        gap: 15px;
+        gap: 20px;
     }
 
     .dark-mode-icon {
-        right: 8px;
+        right: 7px;
     }
 }
 
@@ -409,11 +409,11 @@ body.dark-mode .nav-cart-count {
     }
 
     .nav-login-cart {
-        gap: 12px;
+        gap: 18px;
     }
 
     .dark-mode-icon {
-        right: 6px;
+        right: 7px;
     }
 }
 
@@ -427,11 +427,11 @@ body.dark-mode .nav-cart-count {
     }
 
     .nav-login-cart {
-        gap: 10px;
+        gap: 18px;
     }
 
     .dark-mode-icon {
-        right: 4px;
+        right: 8px;
     }
 }
 
@@ -441,14 +441,31 @@ body.dark-mode .nav-cart-count {
     }
 
     .nav-menu {
-        gap: 5px;
+        gap: 6px;
     }
 
     .nav-login-cart {
-        gap: 8px;
+        gap: 18px;
     }
 
     .dark-mode-icon {
-        right: 2px;
+        right: 7px;
+    }
+}
+@media (max-width: 440px) {
+    .nav-logo p {
+        font-size: 16px;
+    }
+
+    .nav-menu {
+        gap: 6px;
+    }
+
+    .nav-login-cart {
+        gap: 18px;
+    }
+
+    .dark-mode-icon {
+        right: 7px;
     }
 }
