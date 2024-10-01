@@ -12,7 +12,7 @@
 
 }
 .footer-logo p{
-    color: #383838;
+    color: #ad9279;
     font-size: 46px;
     font-weight: 700;
 
@@ -21,7 +21,7 @@
     display: flex;
     list-style: none;
     gap: 50px;
-    color: #252525;
+    color: #ad9279;
     font-size: 20px;
 }
 
@@ -47,7 +47,7 @@
     gap: 30px;
     width: 100%;
     margin-bottom: 30px;
-    color: #1a1a1a;
+    color: #ad9279;
     font-size: 20px;
 }
 .footer-copyright hr{

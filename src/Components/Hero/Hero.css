@@ -27,9 +27,11 @@
     display: flex;
     align-items: center;
     gap: 20px;
+  
 }
 .hand-hand-icon img{
     width: 105px;
+ 
 }
 .hero-latest-btn {
     display: flex;
