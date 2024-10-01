@@ -329,7 +329,7 @@ body.dark-mode .nav-cart-count {
     .nav_dropdown {
         display: block; /* Show dropdown icon at 800px */
         cursor: pointer;
-        width: 40px; /* Adjust size as needed */
+        width: 28px; /* Adjust size as needed */
         height: auto; /* Maintain aspect ratio */
     }
     
@@ -351,6 +351,10 @@ body.dark-mode .nav-cart-count {
     .nav-menu-visible {
         display: flex !important;
     }
+
+    .nav-logo p {
+        font-size: 22px;
+    }
     
     .nav-menu li {
         margin-bottom: 15px;
@@ -365,7 +369,17 @@ body.dark-mode .nav-cart-count {
 /* Responsive Design */
 @media (max-width: 500px) {
     .nav-logo p {
-        font-size: 24px;
+        font-size: 21px;
+        gap: 8px
+    }
+
+  
+
+    .nav_dropdown {
+        display: block; /* Show dropdown icon at 800px */
+        cursor: pointer;
+        width: 24px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .nav-menu {
@@ -373,7 +387,7 @@ body.dark-mode .nav-cart-count {
     }
 
     .nav-login-cart {
-        gap: 22px;
+        gap: 23px;
     }
 
     .dark-mode-icon {
@@ -384,6 +398,7 @@ body.dark-mode .nav-cart-count {
 @media (max-width: 480px) {
     .nav-logo p {
         font-size: 20px;
+        gap:6px
     }
 
     .nav-menu {
@@ -391,7 +406,7 @@ body.dark-mode .nav-cart-count {
     }
 
     .nav-login-cart {
-        gap: 20px;
+        gap: 22px;
     }
 
     .dark-mode-icon {
@@ -401,7 +416,8 @@ body.dark-mode .nav-cart-count {
 
 @media (max-width: 470px) {
     .nav-logo p {
-        font-size: 20px;
+        font-size: 19px;
+        gap:6px
     }
 
     .nav-menu {
@@ -409,7 +425,7 @@ body.dark-mode .nav-cart-count {
     }
 
     .nav-login-cart {
-        gap: 18px;
+        gap: 19px;
     }
 
     .dark-mode-icon {
@@ -437,7 +453,7 @@ body.dark-mode .nav-cart-count {
 
 @media (max-width: 450px) {
     .nav-logo p {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .nav-menu {
@@ -469,3 +485,21 @@ body.dark-mode .nav-cart-count {
         right: 7px;
     }
 }
+@media (max-width: 430px) {
+    .nav-logo p {
+        font-size: 16px;
+    }
+
+    .nav-menu {
+        gap: 6px;
+    }
+
+    .nav-login-cart {
+        gap: 17px;
+    }
+
+    .dark-mode-icon {
+        right: 7px;
+    }
+}
+
