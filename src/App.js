@@ -11,6 +11,9 @@ import men_banner from './Components/Assets/banner_mens.png';
 import women_banner from './Components/Assets/banner_women.png';
 import kid_banner from './Components/Assets/banner_kids.png';
 import Login from './Pages/Login';
+import PlaceOrder from './Pages/PlaceOrder';
+
+
 
 
 function App() {
@@ -29,6 +32,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/login-signup' element={<LoginSignup />} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/placeorder" element={<PlaceOrder/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

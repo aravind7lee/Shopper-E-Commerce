@@ -4,6 +4,7 @@ import { ShopContext } from '../../Context/ShopContext';
 import remove_icon from '../Assets/cart_cross_icon.png';
 import { useNavigate } from 'react-router-dom';
 
+
 const CartItems = () => {
     const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext);
     const navigate = useNavigate();

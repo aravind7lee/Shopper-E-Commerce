@@ -1,0 +1,221 @@
+/* Main layout for the place order page */
+.place-order {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 100px 0px;
+    padding: 0 20px;
+}
+
+/* Left section for delivery information */
+.place-order-left {
+    width: 100%;
+    max-width: max(35%, 500px);
+}
+
+/* Title styling for the delivery information section */
+.place-order-left .title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: rgb(239, 170, 90);
+}
+
+/* Input fields styling */
+.place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #C5C5C5;
+    border-radius: 4px;
+    outline-color: tomato;
+    transition: border 0.3s ease;
+}
+
+.place-order-left input:focus {
+    border: 1px solid tomato;
+}
+
+/* Multi-field layout (e.g., First Name and Last Name in a row) */
+.place-order-left .multi-field {
+    display: flex;
+    gap: 15px;
+}
+
+/* Right section for the cart totals and payment */
+.place-order-right {
+    width: 100%;
+    max-width: max(40%, 500px);
+}
+
+/* Cart totals section */
+.cart-total {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.cart-total h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Styling for the payment method section */
+.payment {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.payment h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.payment .payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid tomato;
+    padding: 15px;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.payment .payment-option:hover {
+    background-color: #ffe7de;
+    border-color: #e14b29;
+}
+
+/* Button styling for the Place Order/Proceed to Payment button */
+.place-order-submit {
+    margin-top: 50px;
+    background-color: tomato;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+}
+
+.place-order-submit button {
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+}
+
+.place-order-submit button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.place-order-submit button:active {
+    background: linear-gradient(90deg, #c93fef 0%, #c93fef 40%);
+}
+
+.place-order-submit:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    .cart-total {
+        background-color: #ad9279; /* Dark background for dark mode */
+        border-color: #555; /* Darker border for better visibility */
+    }
+
+    .cart-total h2, .cart-total-details p {
+        color: white; /* White text for better contrast */
+    }
+}
+
+.cart-total h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white; /* Default color for light mode */
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+/* Styling for the payment method section */
+.payment {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.payment h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333; /* Default color for light mode */
+}
+
+/* Dark mode styles for payment section */
+@media (prefers-color-scheme: dark) {
+    .payment h2 {
+        color: #fff; /* White text for dark mode */
+    }
+}
+
+/* Button styling for the Place Order/Proceed to Payment button */
+.place-order-submit {
+    margin-top: 50px;
+    background-color: #b7a9fe;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+}
+
+.place-order-submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #EAD8B1;
+}
+
+.place-order-submit:active {
+    background: linear-gradient(90deg, #c93fef 0%, #c93fef 40%);
+}
+
+
+/* Responsive adjustments for smaller screen sizes */
+@media (max-width: 700px) {
+    .place-order {
+        flex-direction: column;
+    }
+
+    .place-order-left, .place-order-right {
+        max-width: 100%;
+    }
+
+    .payment .payment-option {
+        max-width: 100%;
+    }
+}

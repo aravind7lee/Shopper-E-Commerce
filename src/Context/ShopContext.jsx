@@ -1,6 +1,5 @@
 import React, { createContext, useState } from "react";
-import all_product from "../Components/Assets/all_product";
-import CartItems from "../Components/CartItems/CartItems";
+import all_product from "../Components/Assets/all_product"; // Assuming this is the product list
 
 export const ShopContext = createContext(null);
 
@@ -14,6 +13,10 @@ const getDefaultCart = () => {
 
 const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
+    const [token, setToken] = useState('your_auth_token'); // Add the token here for authorization
+    const [currency, setCurrency] = useState('$'); // Assuming currency is USD, adjust if needed
+    const [deliveryCharge, setDeliveryCharge] = useState(5); // Example delivery charge, adjust as needed
+    const url = 'https://api.yourbackend.com'; // Your API base URL
 
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
@@ -51,8 +54,12 @@ const ShopContextProvider = (props) => {
         all_product,
         cartItems,
         addToCart,
-        CartItems,
-        removeFromCart
+        removeFromCart,
+        setCartItems,
+        token, // Pass token to context
+        currency, // Pass currency to context
+        deliveryCharge, // Pass deliveryCharge to context
+        url, // Pass URL to context
     };
 
     return (
