@@ -13,9 +13,9 @@ const getDefaultCart = () => {
 
 const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
-    const [token, setToken] = useState('your_auth_token'); // Add the token here for authorization
-    const [currency, setCurrency] = useState('$'); // Assuming currency is USD, adjust if needed
-    const [deliveryCharge, setDeliveryCharge] = useState(5); // Example delivery charge, adjust as needed
+    const [token] = useState('your_auth_token'); // Kept without setter if you want to use it later
+    const [currency] = useState('$'); // Kept without setter if you want to use it later
+    const [deliveryCharge] = useState(5); // Kept without setter if you want to use it later
     const url = 'https://api.yourbackend.com'; // Your API base URL
 
     const addToCart = (itemId) => {
